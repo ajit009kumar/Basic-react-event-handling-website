@@ -4,8 +4,11 @@ import logger from 'redux-logger';
 import React from 'react';
 import {render} from 'react-dom';
 import BookList from './components/pages/bookList';
+import Login from './components/pages/login';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import App from './app'
 // import combined reducers
 
 import reducers from './reducers/index';
@@ -23,7 +26,7 @@ const store = createStore(reducers,middleware);
 
 render(
 	 <Provider store = {store} >
-	 <BookList /> 
+     <App />
 	 </Provider>,
 	 document.getElementById('app')
 );
